@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="Description" content="Enter your description here" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="stylesheet" href="main.css" />
+    <title>Weather API</title>
+  </head>
+  <body>
+    <h1 class="text-center">The Weather Application</h1>
+    <h3>
+      Welcome to the Weather App! Enter the name of your favorite city to see
+      their current temperature, and even get a glimpse of the beautiful place.
+    </h3>
+    <div class="input">
+      <input
+        type="text"
+        id="search"
+        class="inputValue"
+        placeholder="Enter a city"
+      />
+      <input type="submit" value="Submit" class="button" />
+    </div>
+
+    <div id="newCard" class="card" style="width: 18rem">
+      <ul id="card-display" class="list-group list-group-flush">
+        <li id="name" class="list-group-item">Name</li>
+        <li id="temp" class="list-group-item">Temperature</li>
+        <li id="max-temp" class="list-group-item">High</li>
+        <li id="min-temp" class="list-group-item">Low</li>
+        <li id="desc" class="list-group-item">Forecast</li>
+        <li id="humidity" class="list-group-item">Humidity</li>
+      </ul>
+    </div>
+
+    <div style="display: flex; flex-direction: column; align-items: center">
+      <div>
+        <button id="img-btn" onclick="searchPhotos()">
+          Get An Image of Your City
+        </button>
+        <button id="img-btn" onclick="clear_data()">Clear Data</button>
+      </div>
+      <div id="pic-image"></div>
+    </div>
+
+    <script src="main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+  </body>
+</html>
